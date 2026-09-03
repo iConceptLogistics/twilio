@@ -1,0 +1,10 @@
+{:paths ["src"]
+ :deps  {clj-http/clj-http {:mvn/version "3.13.0"}
+         cheshire/cheshire {:mvn/version "5.13.0"}
+         metosin/malli     {:mvn/version "0.16.4"}}
+ :aliases
+ {:dev  {:extra-paths ["dev"]}
+  :test {:extra-paths ["test"]
+         :extra-deps  {tortue/spy          {:mvn/version "2.15.0"}
+                       lambdaisland/kaocha {:mvn/version "1.91.1392"}}
+         :main-opts   ["-m" "kaocha.runner"]}}}
